@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.calculator {
+  width: 100%;
+}
+
+.display {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  min-height: 24px;
+}
+
+.current-operand {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #ffaa33;
+}
+
+.special {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.special:hover {
+  background-color: #c5c5c5;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .calculator-container {
+    padding: 15px;
+    margin: 0 15px;
+  }
+
+  .display {
+    padding: 15px;
+    min-height: 80px;
+  }
+
+  .previous-operand {
+    font-size: 1rem;
+  }
+
+  .current-operand {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .buttons {
+    grid-gap: 8px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
