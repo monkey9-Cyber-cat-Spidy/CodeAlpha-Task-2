@@ -31,7 +31,7 @@ A clean, responsive calculator application built with HTML, CSS, and JavaScript 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/calculator.git
+   git clone https://github.com/monkey9-Cyber-cat-Spidy/CodeAlpha-Task-2/tree/main
    cd calculator
    ```
 
